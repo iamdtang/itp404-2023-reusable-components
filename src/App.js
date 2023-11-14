@@ -24,7 +24,9 @@ function App() {
             />
           );
         }}
-      />
+      >
+        <p>A 5 star review is much appreciated.</p>
+      </StarRating>
     </div>
   );
 }

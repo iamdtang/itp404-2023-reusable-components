@@ -18,5 +18,10 @@ export default function StarRating(props) {
     );
   }
 
-  return <>{stars}</>;
+  return (
+    <>
+      {props.children}
+      {stars}
+    </>
+  );
 }
