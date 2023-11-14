@@ -9,6 +9,8 @@ function App() {
   return (
     <div>
       <StarRating
+        emptyColor="#aaa"
+        filledColor="green"
         rating={rating}
         onStarClick={(selectedRating) => {
           setRating(selectedRating);

@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function StarRating(props) {
   const stars = [];
+  const emptyColor = props.emptyColor || "#eee";
+  const filledColor = props.filledColor || "yellow";
 
   for (let i = 1; i <= 5; i++) {
     stars.push(
@@ -16,7 +18,7 @@ export default function StarRating(props) {
       >
         <FontAwesomeIcon
           icon={faStar}
-          color={i <= props.rating ? "yellow" : "#eee"}
+          color={i <= props.rating ? filledColor : emptyColor}
           size="3x"
         />
       </button>
