@@ -10,12 +10,14 @@ function App() {
 
   return (
     <div>
+      <p>A 5 star review is much appreciated.</p>
       <StarRating
         rating={rating}
         onStarClick={(selectedRating) => {
           setRating(selectedRating);
         }}
-        renderStar={(isStarFilled) => {
+      >
+        {(isStarFilled) => {
           return (
             <FontAwesomeIcon
               icon={faStar}
@@ -24,8 +26,6 @@ function App() {
             />
           );
         }}
-      >
-        <p>A 5 star review is much appreciated.</p>
       </StarRating>
     </div>
   );

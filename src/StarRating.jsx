@@ -13,15 +13,10 @@ export default function StarRating(props) {
           props.onStarClick(i);
         }}
       >
-        {props.renderStar(isStarFilled)}
+        {props.children(isStarFilled)}
       </button>
     );
   }
 
-  return (
-    <>
-      {props.children}
-      {stars}
-    </>
-  );
+  return <>{stars}</>;
 }
