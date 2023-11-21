@@ -8,12 +8,15 @@ export default function StarRating(props) {
       <button
         type="button"
         className="btn"
+        data-testid="star-button"
         key={i}
         onClick={() => {
           props.onStarClick(i);
         }}
       >
-        {props.children(isStarFilled)}
+        <span data-testid={isStarFilled ? "filled-star" : "empty-star"}>
+          {props.children(isStarFilled)}
+        </span>
       </button>
     );
   }
