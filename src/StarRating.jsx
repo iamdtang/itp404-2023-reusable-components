@@ -1,7 +1,8 @@
 export default function StarRating(props) {
   const stars = [];
+  const total = props.total ?? 5;
 
-  for (let i = 1; i <= 5; i++) {
+  for (let i = 1; i <= total; i++) {
     const isStarFilled = i <= props.rating;
 
     stars.push(
